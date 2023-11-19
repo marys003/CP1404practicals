@@ -3,13 +3,13 @@ from prac_09.taxi import Taxi
 class SilverServiceTaxi(Taxi):
     """Specialized version of Taxi with fanciness and flagfall attributes."""
 
-    flagfall = 4.50
+    flagfall = 4.50  # class variable
 
     def __init__(self, name, fuel, fanciness):
         """Initialize a SilverServiceTaxi instance, based on parent class Taxi."""
         super().__init__(name, fuel)
         self.fanciness = fanciness
-        self.price_per_km *= fanciness
+        self.price_per_km *= fanciness  # Multiply the price_per_km by fanciness
 
     def get_fare(self):
         """Return the price for the taxi trip, including flagfall."""
