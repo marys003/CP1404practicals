@@ -32,7 +32,7 @@ def drive_taxi(taxi):
 def main():
     current_taxi = None
     total_bill = 0
-    taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
+    taxis = [Taxi("Prius", 123), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
 
     print("Let's drive!")
 
