@@ -27,10 +27,10 @@ def display_email_dictionary(email_dict):
     print("\nEmail dictionary:")
     for email, name in email_dict.items():
         print(f"{name} ({email})")
-
 def main():
     email_dict = create_email_dictionary()
     display_email_dictionary(email_dict)
+
 
 if __name__ == "__main__":
     main()
