@@ -1,0 +1,16 @@
+BoxLayout:
+    orientation: 'vertical'
+    id: main
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: 'Dynamic Labels'
+
+        Label:
+            text: 'Names:'
+
+    BoxLayout:
+        orientation: 'vertical'
+        id: labels

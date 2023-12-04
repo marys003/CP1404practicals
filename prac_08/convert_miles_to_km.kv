@@ -1,0 +1,30 @@
+<MilesConverter>:
+    orientation: 'vertical'
+
+    TextInput:
+        id: miles_input
+        input_filter: 'float'
+        hint_text: 'Enter miles'
+        multiline: False
+        on_text: root.calculate_conversion()
+
+    Label:
+        text: root.output_text
+        font_size: 24
+        color: (1, 1, 0, 1)  # Yellow text color
+
+    BoxLayout:
+        orientation: 'horizontal'
+
+        Button:
+            text: 'Up'
+            on_press: root.handle_increment(1)
+
+        Button:
+            text: 'Down'
+            on_press: root.handle_increment(-1)
+
+        # Uncomment the line below for the Convert button
+        # Button:
+        #     text: 'Convert'
+        #     on_press: root.calculate_conversion()

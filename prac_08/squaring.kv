@@ -1,0 +1,54 @@
+BoxLayout:
+    orientation: 'vertical'  # Red Box (Top-level vertical layout)
+
+    # Red Box: TextInput, Green Box, Convert Button, and Square Button
+    BoxLayout:
+        orientation: 'vertical'
+
+        # Blue Box: TextInput and Green Box
+        BoxLayout:
+            orientation: 'horizontal'
+
+            TextInput:
+                id: miles_input
+                input_filter: 'float'
+                hint_text: 'Enter miles'
+                multiline: False
+                size_hint_x: 0.6  # Set the width of TextInput to 60% of the available space
+
+            # Green Box (Nested vertical layout)
+            BoxLayout:
+                orientation: 'vertical'
+
+                Button:
+                    text: 'Up'
+                    size_hint_y: None  # Set height to fixed value
+                    height: '48dp'     # Set height to 48dp
+                    on_press: app.handle_up_button()
+
+                Button:
+                    text: 'Down'
+                    size_hint_y: None  # Set height to fixed value
+                    height: '48dp'     # Set height to 48dp
+                    on_press: app.handle_down_button()
+
+        # Convert Button and Square Button
+        BoxLayout:
+            orientation: 'horizontal'
+
+            Button:
+                text: 'Convert'
+                on_press: app.handle_calculate(miles_input.text)
+
+            Button:
+                text: 'Square'
+                on_press: app.handle_calculate(input_number.text)
+
+        Label:
+            text: 'Convert Miles to Kilometres'
+            font_size: 24
+            color: (0, 0, 1, 1)  # Blue color (RGBA tuple: (0, 0, 1, 1))
+
+    # Instruction Label
+    Label:
+        text: 'Enter a number and press "Square"'
