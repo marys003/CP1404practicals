@@ -27,6 +27,7 @@ while True:
         print(f"Summary: {page.summary}")
         print(f"URL: {page.url}\n")
 
+
     except wikipedia.exceptions.DisambiguationError as e:
         print(f"Disambiguation page: {e.options}")
     except wikipedia.exceptions.HTTPTimeoutError:
