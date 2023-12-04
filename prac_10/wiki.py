@@ -33,3 +33,4 @@ while True:
         print("Error: Unable to connect to Wikipedia. Please try again later.")
     except wikipedia.exceptions.WikipediaException as e:
         print(f"Error: {e}")
+
