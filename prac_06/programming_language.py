@@ -1,3 +1,7 @@
+'''Estimated time:1 hr
+Actual time: 30 mins'''
+
+
 class ProgrammingLanguage:
     def __init__(self, name, typing, reflection, year):
         self.name = name
