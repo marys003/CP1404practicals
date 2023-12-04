@@ -47,4 +47,3 @@ def run_tests():
     test_car_default_fuel = Car()
     assert test_car_default_fuel.fuel == Car.DEFAULT_FUEL, "Car does not set fuel correctly with default value"
 
-    # Uncomment the line below to r
